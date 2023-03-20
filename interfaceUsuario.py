@@ -3,6 +3,8 @@ import tkinter.messagebox as MessageBox
 import traceback
 from Inserir import *
 from selecionar import *
+from atualizarTabela import *
+from deletarUsuario import *
 
 
 
@@ -34,17 +36,17 @@ def Selecione():
 def Insere():
     Inserir(nome_entrada, telefone_entrada)
 
-def DEL():
-    print("Deletar")
+def Delete():
+    deletar(id_entrada, nome_entrada, telefone_entrada)
 
-def Atualizar():
-    print("Atualizar")
+def Atualize():
+    atualizarTabela(id_entrada, nome_entrada, telefone_entrada)
 
 
 
 btnInserir = Button(root, text="Inserir", command=Insere, font=('verdana 15')).place(x=100, y=190)
-btnDeletar = Button(root, text="Deletar", command=DEL, font=("verdana 15")).place(x=200, y=190)
-btnAtualizar = Button(root, text="Atualizar", command=Atualizar, font=("verdana 15")).place(x=320, y=190)
+btnDeletar = Button(root, text="Deletar", command=Delete, font=("verdana 15")).place(x=200, y=190)
+btnAtualizar = Button(root, text="Atualizar", command=Atualize, font=("verdana 15")).place(x=320, y=190)
 btnSelecionar = Button(root, text="Selecionar", command=Selecione, font=("verdana")).place(x=200, y=240)
 
 root.mainloop()
